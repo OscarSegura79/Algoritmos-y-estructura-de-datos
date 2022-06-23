@@ -1,0 +1,18 @@
+import queue 
+
+q = queue.Queue()
+
+q.put("Ivan");
+q.put("Rafael");
+q.put("Emilio");
+cola=()
+a = 2
+a = input("Lista de espera: ¿Que desea hacer? (a)Agregar otro paciente  (b) Cuantos pacientes faltan  (c) El proximo paciente en pasar: ")
+if a == 'a':
+    q.put(str(input("Agregue el paciente: ")))
+elif a == 'b':
+    print(q.qsize())
+elif a == 'c':
+    print(q.get())
+else:
+    print("")
