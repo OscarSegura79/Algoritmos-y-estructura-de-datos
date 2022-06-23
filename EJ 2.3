@@ -1,0 +1,25 @@
+#Escribir un programa que permita al usuario ingresar nuevos pacientes o indicar que un consultorio se ha liberado y en ese caso
+#imprima el próximo paciente en espera
+posicion=0
+Paciente=["Isa","Dionisio","Ivan"]
+Consultorio=[1,2,3]
+Union=list(zip(Paciente,Consultorio))
+while True:
+ print("1-Agregar nuevo paciente") 
+ print("2-Ingresar consultorio libre e indicar proximo paciente")
+ print("3-Mostrar lista de pacientes")
+
+ op=int(input("opcion:"))
+ if op==1:
+     paciente=str(input("Nombre del paciente :"))
+     Paciente.append(paciente)
+     print(sep="/n")
+ elif op==2:
+       Consu=int(input("Numero del consultorio liberado:"))
+       Consultorio.remove(Consu)
+       print("Consultorio ocupado:",Consultorio,"consultorio disponible:",Consu)
+       print("El proximo paciente en espera es:",Paciente.pop(0))
+       print(sep="/n")
+ elif op==3:
+     print(Paciente)
+     print(sep="/n")
